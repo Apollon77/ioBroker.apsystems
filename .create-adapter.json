@@ -1,0 +1,83 @@
+{
+    "expert": "yes",
+    "cli": false,
+    "adapterName": "apsystems",
+    "title": "APSystems Inverter EMA-Cloud/ECU",
+    "description": "Retrieve data from APSystems inverters that are connected to the EMA Cloud or via ECUs",
+    "keywords": [
+        "apsystems",
+        "inverter",
+        "solar",
+        "ema",
+        "ecu"
+    ],
+    "contributors": "",
+    "authorName": "Ingo Fischer",
+    "authorGithub": "Apollon77",
+    "authorEmail": "github@fischer-ka.de",
+    "features": [
+        "adapter"
+    ],
+    "adminFeatures": [],
+    "type": "energy",
+    "startMode": "daemon",
+    "connectionType": "cloud",
+    "dataSource": "poll",
+    "connectionIndicator": "yes",
+    "adapterSettings": [
+        {
+            "key": "emaCloudUsername",
+            "label": "EMA-Cloud Username",
+            "inputType": "text",
+            "defaultValue": ""
+        },
+        {
+            "key": "emaCloudPassword",
+            "label": "EMA-Cloud Password",
+            "inputType": "text",
+            "defaultValue": ""
+        },
+        {
+            "key": "dataSource",
+            "label": "Data source",
+            "inputType": "select",
+            "options": [
+                {
+                    "text": "EMA Cloud",
+                    "value": "ema"
+                },
+                {
+                    "text": "ECU Device Local",
+                    "value": "ecu"
+                }
+            ],
+            "defaultValue": "ema"
+        },
+        {
+            "key": "ecuId",
+            "label": "ECU ID",
+            "inputType": "text",
+            "defaultValue": ""
+        },
+        {
+            "key": "ecuIP",
+            "label": "ECU WLAN IP",
+            "inputType": "text",
+            "defaultValue": ""
+        }
+    ],
+    "language": "JavaScript",
+    "adminReact": "no",
+    "indentation": "Space (4)",
+    "quotes": "single",
+    "es6class": "yes",
+    "tools": [
+        "ESLint",
+        "type checking"
+    ],
+    "gitRemoteProtocol": "HTTPS",
+    "license": "MIT License",
+    "ci": "gh-actions",
+    "dependabot": "yes",
+    "creatorVersion": "1.33.0"
+}

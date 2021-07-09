@@ -1,0 +1,103 @@
+{
+    "common": {
+        "name": "apsystems",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版"
+            }
+        },
+        "titleLang": {
+            "en": "APSystems Inverter EMA-Cloud/ECU",
+            "de": "APSystems Wechselrichter EMA-Cloud/ECU",
+            "ru": "Инвертор APSystems EMA-Cloud / ECU",
+            "pt": "Inversor APSystems EMA-Cloud / ECU",
+            "nl": "APSystems-omvormer EMA-Cloud/ECU",
+            "fr": "Onduleur APSystems EMA-Cloud/ECU",
+            "it": "APSystems Inverter EMA-Cloud/ECU",
+            "es": "Inversor APSystems EMA-Cloud / ECU",
+            "pl": "Falownik APSystems EMA-Cloud/ECU",
+            "zh-cn": "APSystems 逆变器 EMA-Cloud/ECU"
+        },
+        "desc": {
+            "en": "Retrieve data from APSystems inverters that are connected to the EMA Cloud or via ECUs",
+            "de": "Rufen Sie Daten von APSystems-Wechselrichtern ab, die mit der EMA-Cloud oder über ECUs verbunden sind",
+            "ru": "Получение данных от инверторов APSystems, подключенных к EMA Cloud или через ЭБУ.",
+            "pt": "Recupere dados de inversores APSystems que estão conectados à nuvem EMA ou via ECUs",
+            "nl": "Gegevens ophalen van APSystems-omvormers die zijn verbonden met de EMA Cloud of via ECU's",
+            "fr": "Récupérez les données des onduleurs APSystems connectés au Cloud EMA ou via des ECU",
+            "it": "Recupera i dati dagli inverter APSystems collegati al Cloud EMA o tramite ECU",
+            "es": "Recupere datos de los inversores APSystems que están conectados a EMA Cloud o mediante ECU",
+            "pl": "Pobierz dane z falowników APSystems, które są podłączone do chmury EMA lub za pośrednictwem ECU",
+            "zh-cn": "从连接到 EMA Cloud 或通过 ECU 的 APSystems 逆变器检索数据"
+        },
+        "authors": [
+            "Ingo Fischer <github@fischer-ka.de>"
+        ],
+        "keywords": [
+            "apsystems",
+            "inverter",
+            "solar",
+            "ema",
+            "ecu"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "icon": "apsystems.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/Apollon77/ioBroker.apsystems/master/admin/apsystems.png",
+        "readme": "https://github.com/Apollon77/ioBroker.apsystems/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "energy",
+        "compact": true,
+        "connectionType": "cloud",
+        "dataSource": "poll",
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=2.0.0"
+            }
+        ]
+    },
+    "native": {
+        "emaCloudUsername": "",
+        "emaCloudPassword": "",
+        "dataSource": "ema",
+        "ecuId": "",
+        "ecuIP": ""
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
+}
